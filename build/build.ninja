@@ -11,7 +11,7 @@
 # =============================================================================
 
 # =============================================================================
-# Project: CarProjectraylib
+# Project: main
 # Configurations: Debug
 # =============================================================================
 
@@ -41,44 +41,44 @@ include CMakeFiles/rules.ninja
 
 cmake_ninja_workdir = C$:/dev/CPP/CarProjectRaylib/build/
 # =============================================================================
-# Object build statements for EXECUTABLE target CarProjectRaylib
+# Object build statements for EXECUTABLE target main
 
 
 #############################################
-# Order-only phony target for CarProjectRaylib
+# Order-only phony target for main
 
-build cmake_object_order_depends_target_CarProjectRaylib: phony || .
+build cmake_object_order_depends_target_main: phony || .
 
-build CMakeFiles/CarProjectRaylib.dir/src/main.cpp.obj: CXX_COMPILER__CarProjectRaylib_unscanned_Debug C$:/dev/CPP/CarProjectRaylib/src/main.cpp || cmake_object_order_depends_target_CarProjectRaylib
+build CMakeFiles/main.dir/src/main.cpp.obj: CXX_COMPILER__main_unscanned_Debug C$:/dev/CPP/CarProjectRaylib/src/main.cpp || cmake_object_order_depends_target_main
   CONFIG = Debug
-  DEP_FILE = CMakeFiles\CarProjectRaylib.dir\src\main.cpp.obj.d
+  DEP_FILE = CMakeFiles\main.dir\src\main.cpp.obj.d
   FLAGS = -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=c++17
   INCLUDES = -IC:/dev/CPP/CarProjectRaylib/include
-  OBJECT_DIR = CMakeFiles\CarProjectRaylib.dir
-  OBJECT_FILE_DIR = CMakeFiles\CarProjectRaylib.dir\src
-  TARGET_COMPILE_PDB = CMakeFiles\CarProjectRaylib.dir\
-  TARGET_PDB = CarProjectRaylib.pdb
+  OBJECT_DIR = CMakeFiles\main.dir
+  OBJECT_FILE_DIR = CMakeFiles\main.dir\src
+  TARGET_COMPILE_PDB = CMakeFiles\main.dir\
+  TARGET_PDB = main.pdb
 
 
 # =============================================================================
-# Link build statements for EXECUTABLE target CarProjectRaylib
+# Link build statements for EXECUTABLE target main
 
 
 #############################################
-# Link the executable CarProjectRaylib.exe
+# Link the executable main.exe
 
-build CarProjectRaylib.exe: CXX_EXECUTABLE_LINKER__CarProjectRaylib_Debug CMakeFiles/CarProjectRaylib.dir/src/main.cpp.obj | C$:/dev/GitHub/raylib/build/raylib/raylib.lib C$:/dev/GitHub/imguiLib/build/imguiLib.lib
+build main.exe: CXX_EXECUTABLE_LINKER__main_Debug CMakeFiles/main.dir/src/main.cpp.obj | C$:/dev/GitHub/raylib/build/raylib/raylib.lib C$:/dev/GitHub/imguiLib/build/imguiLib.lib
   CONFIG = Debug
   FLAGS = -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd
   LINK_FLAGS = -Xlinker /subsystem:console -fuse-ld=lld-link
   LINK_LIBRARIES = C:/dev/GitHub/raylib/build/raylib/raylib.lib  C:/dev/GitHub/imguiLib/build/imguiLib.lib  -lwinmm.lib  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 -loldnames
-  OBJECT_DIR = CMakeFiles\CarProjectRaylib.dir
+  OBJECT_DIR = CMakeFiles\main.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
-  TARGET_COMPILE_PDB = CMakeFiles\CarProjectRaylib.dir\
-  TARGET_FILE = CarProjectRaylib.exe
-  TARGET_IMPLIB = CarProjectRaylib.lib
-  TARGET_PDB = CarProjectRaylib.pdb
+  TARGET_COMPILE_PDB = CMakeFiles\main.dir\
+  TARGET_FILE = main.exe
+  TARGET_IMPLIB = main.lib
+  TARGET_PDB = main.pdb
 
 
 #############################################
@@ -107,7 +107,7 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 # =============================================================================
 # Target aliases.
 
-build CarProjectRaylib: phony CarProjectRaylib.exe
+build main: phony main.exe
 
 # =============================================================================
 # Folder targets.
@@ -117,7 +117,7 @@ build CarProjectRaylib: phony CarProjectRaylib.exe
 #############################################
 # Folder: C:/dev/CPP/CarProjectRaylib/build
 
-build all: phony CarProjectRaylib.exe
+build all: phony main.exe
 
 # =============================================================================
 # Built-in targets

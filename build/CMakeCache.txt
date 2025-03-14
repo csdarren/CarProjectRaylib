@@ -156,7 +156,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=CarProjectraylib
+CMAKE_PROJECT_NAME:STATIC=main
 
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=C:/Program Files/LLVM/bin/llvm-ranlib.exe
@@ -249,6 +249,15 @@ CarProjectraylib_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
 CarProjectraylib_SOURCE_DIR:STATIC=C:/dev/CPP/CarProjectRaylib
+
+//Value Computed by CMake
+main_BINARY_DIR:STATIC=C:/dev/CPP/CarProjectRaylib/build
+
+//Value Computed by CMake
+main_IS_TOP_LEVEL:STATIC=ON
+
+//Value Computed by CMake
+main_SOURCE_DIR:STATIC=C:/dev/CPP/CarProjectRaylib
 
 //The directory containing a CMake configuration file for raylib.
 raylib_DIR:PATH=raylib_DIR-NOTFOUND

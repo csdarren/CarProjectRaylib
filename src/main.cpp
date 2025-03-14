@@ -14,23 +14,16 @@ int main()
     camera.fovy = 60.0f;                         // Camera field-of-view Y
     camera.projection = CAMERA_PERSPECTIVE;      // Camera projection type
 
-    Model carModel = LoadModel("C:/Users/break/Downloads/mini_cooper_gp_r56.glb");
-    std::cout << "Car bones: " << carModel.bones << std::endl;
-    std::cout << "Car boneCount: " << carModel.boneCount << std::endl;
-    std::cout << "Car matCount: " << carModel.materialCount << std::endl;
-    std::cout << "Car mats: " << carModel.materials << std::endl;
-    std::cout << "Car meshCount: " << carModel.meshCount << std::endl;
-    std::cout << "Car meshes: " << carModel.meshes << std::endl;
-    std::cout << "Car meshMat: " << carModel.meshMaterial << std::endl;
+    Model carModel = LoadModel("C:/dev/CPP/CarProjectRaylib/models/MiniCooper.glb");
 
-    Vector3 modelPosition = {11.0f, 0.0f, 11.0f};
+    Vector3 modelPosition = {0.0f, 0.0f, 0.0f};
 
     struct Anim
     {
         int animsCount = 0;
         unsigned int animIndex = 0;
         unsigned int animCurrentFrame = 0;
-        ModelAnimation *modelAnimations = LoadModelAnimations("C:/Users/break/Downloads/mini_cooper_gp_r56.glb", &animsCount);
+        ModelAnimation *modelAnimations = LoadModelAnimations("C:/dev/CPP/CarProjectRaylib/models/MiniCooper.glb", &animsCount);
     };
 
     while (!WindowShouldClose())
@@ -58,6 +51,7 @@ int main()
         BoundingBox carBoundingBox = GetModelBoundingBox(carModel);
         DrawModel(carModel, modelPosition, 1.0f, WHITE);
         DrawBoundingBox(carBoundingBox, RED);
+
         DrawGrid(100, 1.0f);
 
         EndMode3D();

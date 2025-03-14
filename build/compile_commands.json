@@ -1,8 +1,8 @@
 [
 {
   "directory": "C:/dev/CPP/CarProjectRaylib/build",
-  "command": "C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE -IC:/dev/CPP/CarProjectRaylib/include -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=c++17 -o CMakeFiles\\CarProjectRaylib.dir\\src\\main.cpp.obj -c C:\\dev\\CPP\\CarProjectRaylib\\src\\main.cpp",
+  "command": "C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE -IC:/dev/CPP/CarProjectRaylib/include -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=c++17 -o CMakeFiles\\main.dir\\src\\main.cpp.obj -c C:\\dev\\CPP\\CarProjectRaylib\\src\\main.cpp",
   "file": "C:\\dev\\CPP\\CarProjectRaylib\\src\\main.cpp",
-  "output": "CMakeFiles\\CarProjectRaylib.dir\\src\\main.cpp.obj"
+  "output": "CMakeFiles\\main.dir\\src\\main.cpp.obj"
 }
 ]
