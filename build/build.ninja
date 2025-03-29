@@ -80,6 +80,46 @@ build main.exe: CXX_EXECUTABLE_LINKER__main_Debug CMakeFiles/main.dir/src/main.c
   TARGET_IMPLIB = main.lib
   TARGET_PDB = main.pdb
 
+# =============================================================================
+# Object build statements for EXECUTABLE target maintest
+
+
+#############################################
+# Order-only phony target for maintest
+
+build cmake_object_order_depends_target_maintest: phony || .
+
+build CMakeFiles/maintest.dir/src/maintest.cpp.obj: CXX_COMPILER__maintest_unscanned_Debug C$:/dev/CPP/CarProjectRaylib/src/maintest.cpp || cmake_object_order_depends_target_maintest
+  CONFIG = Debug
+  DEP_FILE = CMakeFiles\maintest.dir\src\maintest.cpp.obj.d
+  FLAGS = -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=c++17
+  INCLUDES = -IC:/dev/CPP/CarProjectRaylib/include
+  OBJECT_DIR = CMakeFiles\maintest.dir
+  OBJECT_FILE_DIR = CMakeFiles\maintest.dir\src
+  TARGET_COMPILE_PDB = CMakeFiles\maintest.dir\
+  TARGET_PDB = maintest.pdb
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target maintest
+
+
+#############################################
+# Link the executable maintest.exe
+
+build maintest.exe: CXX_EXECUTABLE_LINKER__maintest_Debug CMakeFiles/maintest.dir/src/maintest.cpp.obj | C$:/dev/GitHub/raylib/build/raylib/raylib.lib C$:/dev/GitHub/imguiLib/build/imguiLib.lib
+  CONFIG = Debug
+  FLAGS = -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd
+  LINK_FLAGS = -Xlinker /subsystem:console -fuse-ld=lld-link
+  LINK_LIBRARIES = C:/dev/GitHub/raylib/build/raylib/raylib.lib  C:/dev/GitHub/imguiLib/build/imguiLib.lib  -lwinmm.lib  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 -loldnames
+  OBJECT_DIR = CMakeFiles\maintest.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_COMPILE_PDB = CMakeFiles\maintest.dir\
+  TARGET_FILE = maintest.exe
+  TARGET_IMPLIB = maintest.lib
+  TARGET_PDB = maintest.pdb
+
 
 #############################################
 # Utility command for edit_cache
@@ -109,6 +149,8 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 
 build main: phony main.exe
 
+build maintest: phony maintest.exe
+
 # =============================================================================
 # Folder targets.
 
@@ -117,7 +159,7 @@ build main: phony main.exe
 #############################################
 # Folder: C:/dev/CPP/CarProjectRaylib/build
 
-build all: phony main.exe
+build all: phony main.exe maintest.exe
 
 # =============================================================================
 # Built-in targets
