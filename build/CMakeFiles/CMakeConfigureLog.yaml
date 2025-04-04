@@ -101,8 +101,8 @@ events:
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "C:/dev/CPP/CarProjectRaylib/build/CMakeFiles/CMakeScratch/TryCompile-euo7yq"
-      binary: "C:/dev/CPP/CarProjectRaylib/build/CMakeFiles/CMakeScratch/TryCompile-euo7yq"
+      source: "C:/dev/CPP/CarProjectRaylib/build/CMakeFiles/CMakeScratch/TryCompile-sdwrjq"
+      binary: "C:/dev/CPP/CarProjectRaylib/build/CMakeFiles/CMakeScratch/TryCompile-sdwrjq"
     cmakeVariables:
       CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "C:/Program Files/LLVM/bin/clang-scan-deps.exe"
       CMAKE_C_FLAGS: ""
@@ -112,16 +112,16 @@ events:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'C:/dev/CPP/CarProjectRaylib/build/CMakeFiles/CMakeScratch/TryCompile-euo7yq'
+        Change Dir: 'C:/dev/CPP/CarProjectRaylib/build/CMakeFiles/CMakeScratch/TryCompile-sdwrjq'
         
-        Run Build Command(s): C:/dev/ninja/ninja.exe -v cmTC_92885
-        [1/2] C:\\PROGRA~1\\LLVM\\bin\\clang.exe   -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -MD -MT CMakeFiles/cmTC_92885.dir/CMakeCCompilerABI.c.obj -MF CMakeFiles\\cmTC_92885.dir\\CMakeCCompilerABI.c.obj.d -o CMakeFiles/cmTC_92885.dir/CMakeCCompilerABI.c.obj -c "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeCCompilerABI.c"
-        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\PROGRA~1\\LLVM\\bin\\clang.exe -nostartfiles -nostdlib -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -v -Xlinker /subsystem:console -fuse-ld=lld-link CMakeFiles/cmTC_92885.dir/CMakeCCompilerABI.c.obj -o cmTC_92885.exe -Xlinker /MANIFEST:EMBED -Xlinker /implib:cmTC_92885.lib -Xlinker /pdb:cmTC_92885.pdb -Xlinker /version:0.0     && cd ."
+        Run Build Command(s): C:/dev/ninja/ninja.exe -v cmTC_ec3ed
+        [1/2] C:\\PROGRA~1\\LLVM\\bin\\clang.exe   -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -MD -MT CMakeFiles/cmTC_ec3ed.dir/CMakeCCompilerABI.c.obj -MF CMakeFiles\\cmTC_ec3ed.dir\\CMakeCCompilerABI.c.obj.d -o CMakeFiles/cmTC_ec3ed.dir/CMakeCCompilerABI.c.obj -c "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeCCompilerABI.c"
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\PROGRA~1\\LLVM\\bin\\clang.exe -nostartfiles -nostdlib -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -v -Xlinker /subsystem:console -fuse-ld=lld-link CMakeFiles/cmTC_ec3ed.dir/CMakeCCompilerABI.c.obj -o cmTC_ec3ed.exe -Xlinker /MANIFEST:EMBED -Xlinker /implib:cmTC_ec3ed.lib -Xlinker /pdb:cmTC_ec3ed.pdb -Xlinker /version:0.0     && cd ."
         clang version 18.1.8
         Target: x86_64-pc-windows-msvc
         Thread model: posix
         InstalledDir: C:\\PROGRA~1\\LLVM\\bin
-         "C:\\\\PROGRA~1\\\\LLVM\\\\bin\\\\lld-link" -out:cmTC_92885.exe "-libpath:C:\\\\Program Files\\\\Microsoft Visual Studio\\\\2022\\\\Community\\\\VC\\\\Tools\\\\MSVC\\\\14.41.34120\\\\lib\\\\x64" "-libpath:C:\\\\Program Files\\\\Microsoft Visual Studio\\\\2022\\\\Community\\\\VC\\\\Tools\\\\MSVC\\\\14.41.34120\\\\atlmfc\\\\lib\\\\x64" "-libpath:C:\\\\Program Files (x86)\\\\Windows Kits\\\\10\\\\Lib\\\\10.0.26100.0\\\\ucrt\\\\x64" "-libpath:C:\\\\Program Files (x86)\\\\Windows Kits\\\\10\\\\Lib\\\\10.0.26100.0\\\\um\\\\x64" "-libpath:C:\\\\Program Files\\\\LLVM\\\\lib\\\\clang\\\\18\\\\lib\\\\windows" -nologo -debug /subsystem:console CMakeFiles/cmTC_92885.dir/CMakeCCompilerABI.c.obj /MANIFEST:EMBED /implib:cmTC_92885.lib /pdb:cmTC_92885.pdb /version:0.0\x0d
+         "C:\\\\PROGRA~1\\\\LLVM\\\\bin\\\\lld-link" -out:cmTC_ec3ed.exe "-libpath:C:\\\\Program Files\\\\Microsoft Visual Studio\\\\2022\\\\Community\\\\VC\\\\Tools\\\\MSVC\\\\14.41.34120\\\\lib\\\\x64" "-libpath:C:\\\\Program Files\\\\Microsoft Visual Studio\\\\2022\\\\Community\\\\VC\\\\Tools\\\\MSVC\\\\14.41.34120\\\\atlmfc\\\\lib\\\\x64" "-libpath:C:\\\\Program Files (x86)\\\\Windows Kits\\\\10\\\\Lib\\\\10.0.26100.0\\\\ucrt\\\\x64" "-libpath:C:\\\\Program Files (x86)\\\\Windows Kits\\\\10\\\\Lib\\\\10.0.26100.0\\\\um\\\\x64" "-libpath:C:\\\\Program Files\\\\LLVM\\\\lib\\\\clang\\\\18\\\\lib\\\\windows" -nologo -debug /subsystem:console CMakeFiles/cmTC_ec3ed.dir/CMakeCCompilerABI.c.obj /MANIFEST:EMBED /implib:cmTC_ec3ed.lib /pdb:cmTC_ec3ed.pdb /version:0.0\x0d
         
       exitCode: 0
   -
@@ -182,8 +182,8 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "C:/dev/CPP/CarProjectRaylib/build/CMakeFiles/CMakeScratch/TryCompile-1c8ovf"
-      binary: "C:/dev/CPP/CarProjectRaylib/build/CMakeFiles/CMakeScratch/TryCompile-1c8ovf"
+      source: "C:/dev/CPP/CarProjectRaylib/build/CMakeFiles/CMakeScratch/TryCompile-zl7c7n"
+      binary: "C:/dev/CPP/CarProjectRaylib/build/CMakeFiles/CMakeScratch/TryCompile-zl7c7n"
     cmakeVariables:
       CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "C:/Program Files/LLVM/bin/clang-scan-deps.exe"
       CMAKE_CXX_FLAGS: ""
@@ -194,16 +194,16 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'C:/dev/CPP/CarProjectRaylib/build/CMakeFiles/CMakeScratch/TryCompile-1c8ovf'
+        Change Dir: 'C:/dev/CPP/CarProjectRaylib/build/CMakeFiles/CMakeScratch/TryCompile-zl7c7n'
         
-        Run Build Command(s): C:/dev/ninja/ninja.exe -v cmTC_a3ccd
-        [1/2] C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE   -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -MD -MT CMakeFiles/cmTC_a3ccd.dir/CMakeCXXCompilerABI.cpp.obj -MF CMakeFiles\\cmTC_a3ccd.dir\\CMakeCXXCompilerABI.cpp.obj.d -o CMakeFiles/cmTC_a3ccd.dir/CMakeCXXCompilerABI.cpp.obj -c "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeCXXCompilerABI.cpp"
-        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE -nostartfiles -nostdlib -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -v -Xlinker /subsystem:console -fuse-ld=lld-link CMakeFiles/cmTC_a3ccd.dir/CMakeCXXCompilerABI.cpp.obj -o cmTC_a3ccd.exe -Xlinker /MANIFEST:EMBED -Xlinker /implib:cmTC_a3ccd.lib -Xlinker /pdb:cmTC_a3ccd.pdb -Xlinker /version:0.0     && cd ."
+        Run Build Command(s): C:/dev/ninja/ninja.exe -v cmTC_0fab3
+        [1/2] C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE   -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -MD -MT CMakeFiles/cmTC_0fab3.dir/CMakeCXXCompilerABI.cpp.obj -MF CMakeFiles\\cmTC_0fab3.dir\\CMakeCXXCompilerABI.cpp.obj.d -o CMakeFiles/cmTC_0fab3.dir/CMakeCXXCompilerABI.cpp.obj -c "C:/Program Files/CMake/share/cmake-4.0/Modules/CMakeCXXCompilerABI.cpp"
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE -nostartfiles -nostdlib -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -v -Xlinker /subsystem:console -fuse-ld=lld-link CMakeFiles/cmTC_0fab3.dir/CMakeCXXCompilerABI.cpp.obj -o cmTC_0fab3.exe -Xlinker /MANIFEST:EMBED -Xlinker /implib:cmTC_0fab3.lib -Xlinker /pdb:cmTC_0fab3.pdb -Xlinker /version:0.0     && cd ."
         clang version 18.1.8
         Target: x86_64-pc-windows-msvc
         Thread model: posix
         InstalledDir: C:\\PROGRA~1\\LLVM\\bin
-         "C:\\\\PROGRA~1\\\\LLVM\\\\bin\\\\lld-link" -out:cmTC_a3ccd.exe "-libpath:C:\\\\Program Files\\\\Microsoft Visual Studio\\\\2022\\\\Community\\\\VC\\\\Tools\\\\MSVC\\\\14.41.34120\\\\lib\\\\x64" "-libpath:C:\\\\Program Files\\\\Microsoft Visual Studio\\\\2022\\\\Community\\\\VC\\\\Tools\\\\MSVC\\\\14.41.34120\\\\atlmfc\\\\lib\\\\x64" "-libpath:C:\\\\Program Files (x86)\\\\Windows Kits\\\\10\\\\Lib\\\\10.0.26100.0\\\\ucrt\\\\x64" "-libpath:C:\\\\Program Files (x86)\\\\Windows Kits\\\\10\\\\Lib\\\\10.0.26100.0\\\\um\\\\x64" "-libpath:C:\\\\Program Files\\\\LLVM\\\\lib\\\\clang\\\\18\\\\lib\\\\windows" -nologo -debug /subsystem:console CMakeFiles/cmTC_a3ccd.dir/CMakeCXXCompilerABI.cpp.obj /MANIFEST:EMBED /implib:cmTC_a3ccd.lib /pdb:cmTC_a3ccd.pdb /version:0.0\x0d
+         "C:\\\\PROGRA~1\\\\LLVM\\\\bin\\\\lld-link" -out:cmTC_0fab3.exe "-libpath:C:\\\\Program Files\\\\Microsoft Visual Studio\\\\2022\\\\Community\\\\VC\\\\Tools\\\\MSVC\\\\14.41.34120\\\\lib\\\\x64" "-libpath:C:\\\\Program Files\\\\Microsoft Visual Studio\\\\2022\\\\Community\\\\VC\\\\Tools\\\\MSVC\\\\14.41.34120\\\\atlmfc\\\\lib\\\\x64" "-libpath:C:\\\\Program Files (x86)\\\\Windows Kits\\\\10\\\\Lib\\\\10.0.26100.0\\\\ucrt\\\\x64" "-libpath:C:\\\\Program Files (x86)\\\\Windows Kits\\\\10\\\\Lib\\\\10.0.26100.0\\\\um\\\\x64" "-libpath:C:\\\\Program Files\\\\LLVM\\\\lib\\\\clang\\\\18\\\\lib\\\\windows" -nologo -debug /subsystem:console CMakeFiles/cmTC_0fab3.dir/CMakeCXXCompilerABI.cpp.obj /MANIFEST:EMBED /implib:cmTC_0fab3.lib /pdb:cmTC_0fab3.pdb /version:0.0\x0d
         
       exitCode: 0
   -
@@ -267,8 +267,8 @@ events:
     checks:
       - "Detecting CXX compile features"
     directories:
-      source: "C:/dev/CPP/CarProjectRaylib/build/CMakeFiles/CMakeScratch/TryCompile-vsp1lc"
-      binary: "C:/dev/CPP/CarProjectRaylib/build/CMakeFiles/CMakeScratch/TryCompile-vsp1lc"
+      source: "C:/dev/CPP/CarProjectRaylib/build/CMakeFiles/CMakeScratch/TryCompile-snj9oa"
+      binary: "C:/dev/CPP/CarProjectRaylib/build/CMakeFiles/CMakeScratch/TryCompile-snj9oa"
     cmakeVariables:
       CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "C:/Program Files/LLVM/bin/clang-scan-deps.exe"
       CMAKE_CXX_FLAGS: ""
@@ -278,11 +278,11 @@ events:
       variable: "CMAKE_CXX_FEATURE_TEST"
       cached: true
       stdout: |
-        Change Dir: 'C:/dev/CPP/CarProjectRaylib/build/CMakeFiles/CMakeScratch/TryCompile-vsp1lc'
+        Change Dir: 'C:/dev/CPP/CarProjectRaylib/build/CMakeFiles/CMakeScratch/TryCompile-snj9oa'
         
-        Run Build Command(s): C:/dev/ninja/ninja.exe -v cmTC_829c9
-        [1/2] C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE   -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd   -std=c++14 -MD -MT CMakeFiles/cmTC_829c9.dir/feature_tests.cxx.obj -MF CMakeFiles\\cmTC_829c9.dir\\feature_tests.cxx.obj.d -o CMakeFiles/cmTC_829c9.dir/feature_tests.cxx.obj -c C:/dev/CPP/CarProjectRaylib/build/CMakeFiles/CMakeScratch/TryCompile-vsp1lc/feature_tests.cxx
-        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE -nostartfiles -nostdlib -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -Xlinker /subsystem:console -fuse-ld=lld-link CMakeFiles/cmTC_829c9.dir/feature_tests.cxx.obj -o cmTC_829c9.exe -Xlinker /MANIFEST:EMBED -Xlinker /implib:cmTC_829c9.lib -Xlinker /pdb:cmTC_829c9.pdb -Xlinker /version:0.0   -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 -loldnames  && cd ."
+        Run Build Command(s): C:/dev/ninja/ninja.exe -v cmTC_7526c
+        [1/2] C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE   -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd   -std=c++14 -MD -MT CMakeFiles/cmTC_7526c.dir/feature_tests.cxx.obj -MF CMakeFiles\\cmTC_7526c.dir\\feature_tests.cxx.obj.d -o CMakeFiles/cmTC_7526c.dir/feature_tests.cxx.obj -c C:/dev/CPP/CarProjectRaylib/build/CMakeFiles/CMakeScratch/TryCompile-snj9oa/feature_tests.cxx
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE -nostartfiles -nostdlib -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -Xlinker /subsystem:console -fuse-ld=lld-link CMakeFiles/cmTC_7526c.dir/feature_tests.cxx.obj -o cmTC_7526c.exe -Xlinker /MANIFEST:EMBED -Xlinker /implib:cmTC_7526c.lib -Xlinker /pdb:cmTC_7526c.pdb -Xlinker /version:0.0   -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 -loldnames  && cd ."
         
       exitCode: 0
   -
@@ -297,8 +297,8 @@ events:
     checks:
       - "Detecting CXX compile features"
     directories:
-      source: "C:/dev/CPP/CarProjectRaylib/build/CMakeFiles/CMakeScratch/TryCompile-48fpw3"
-      binary: "C:/dev/CPP/CarProjectRaylib/build/CMakeFiles/CMakeScratch/TryCompile-48fpw3"
+      source: "C:/dev/CPP/CarProjectRaylib/build/CMakeFiles/CMakeScratch/TryCompile-xdezmv"
+      binary: "C:/dev/CPP/CarProjectRaylib/build/CMakeFiles/CMakeScratch/TryCompile-xdezmv"
     cmakeVariables:
       CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "C:/Program Files/LLVM/bin/clang-scan-deps.exe"
       CMAKE_CXX_FLAGS: ""
@@ -308,11 +308,11 @@ events:
       variable: "CMAKE_CXX_FEATURE_TEST"
       cached: true
       stdout: |
-        Change Dir: 'C:/dev/CPP/CarProjectRaylib/build/CMakeFiles/CMakeScratch/TryCompile-48fpw3'
+        Change Dir: 'C:/dev/CPP/CarProjectRaylib/build/CMakeFiles/CMakeScratch/TryCompile-xdezmv'
         
-        Run Build Command(s): C:/dev/ninja/ninja.exe -v cmTC_e55f8
-        [1/2] C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE   -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd   -std=c++14 -MD -MT CMakeFiles/cmTC_e55f8.dir/feature_tests.cxx.obj -MF CMakeFiles\\cmTC_e55f8.dir\\feature_tests.cxx.obj.d -o CMakeFiles/cmTC_e55f8.dir/feature_tests.cxx.obj -c C:/dev/CPP/CarProjectRaylib/build/CMakeFiles/CMakeScratch/TryCompile-48fpw3/feature_tests.cxx
-        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE -nostartfiles -nostdlib -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -Xlinker /subsystem:console -fuse-ld=lld-link CMakeFiles/cmTC_e55f8.dir/feature_tests.cxx.obj -o cmTC_e55f8.exe -Xlinker /MANIFEST:EMBED -Xlinker /implib:cmTC_e55f8.lib -Xlinker /pdb:cmTC_e55f8.pdb -Xlinker /version:0.0   -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 -loldnames  && cd ."
+        Run Build Command(s): C:/dev/ninja/ninja.exe -v cmTC_89d08
+        [1/2] C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE   -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd   -std=c++14 -MD -MT CMakeFiles/cmTC_89d08.dir/feature_tests.cxx.obj -MF CMakeFiles\\cmTC_89d08.dir\\feature_tests.cxx.obj.d -o CMakeFiles/cmTC_89d08.dir/feature_tests.cxx.obj -c C:/dev/CPP/CarProjectRaylib/build/CMakeFiles/CMakeScratch/TryCompile-xdezmv/feature_tests.cxx
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\PROGRA~1\\LLVM\\bin\\CLANG_~1.EXE -nostartfiles -nostdlib -O0 -g -Xclang -gcodeview -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -Xlinker /subsystem:console -fuse-ld=lld-link CMakeFiles/cmTC_89d08.dir/feature_tests.cxx.obj -o cmTC_89d08.exe -Xlinker /MANIFEST:EMBED -Xlinker /implib:cmTC_89d08.lib -Xlinker /pdb:cmTC_89d08.pdb -Xlinker /version:0.0   -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 -loldnames  && cd ."
         
       exitCode: 0
 ...

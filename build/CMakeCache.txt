@@ -112,7 +112,7 @@ CMAKE_EXPORT_COMPILE_COMMANDS:BOOL=
 CMAKE_FIND_PACKAGE_REDIRECTS_DIR:STATIC=C:/dev/CPP/CarProjectRaylib/build/CMakeFiles/pkgRedirects
 
 //Install path prefix, prepended onto install directories.
-CMAKE_INSTALL_PREFIX:PATH=C:/Program Files (x86)/CarProjectraylib
+CMAKE_INSTALL_PREFIX:PATH=C:/Program Files (x86)/main
 
 //Path to a program.
 CMAKE_LINKER:FILEPATH=C:/Program Files/LLVM/bin/lld-link.exe
@@ -240,15 +240,6 @@ CMAKE_TAPI:FILEPATH=CMAKE_TAPI-NOTFOUND
 // during the make.  This is useful for debugging only. With Visual
 // Studio IDE projects all commands are done without /nologo.
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
-
-//Value Computed by CMake
-CarProjectraylib_BINARY_DIR:STATIC=C:/dev/CPP/CarProjectRaylib/build
-
-//Value Computed by CMake
-CarProjectraylib_IS_TOP_LEVEL:STATIC=ON
-
-//Value Computed by CMake
-CarProjectraylib_SOURCE_DIR:STATIC=C:/dev/CPP/CarProjectRaylib
 
 //Value Computed by CMake
 main_BINARY_DIR:STATIC=C:/dev/CPP/CarProjectRaylib/build

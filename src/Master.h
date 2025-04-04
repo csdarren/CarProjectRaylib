@@ -13,6 +13,8 @@
 
 #include "camera.hpp"
 #include "shader.hpp"
+#include "gui.hpp"
+#include "imGuiUtil.hpp"
 
 #include <vector>
 #include <iostream>
