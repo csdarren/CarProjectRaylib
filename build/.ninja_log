@@ -1,5 +1,0 @@
-# ninja log v6
-12	623	7654449920309351	CMakeFiles/main.dir/src/main.cpp.obj	27a3e24aa745f077
-16	633	7654449920349392	CMakeFiles/maintest.dir/src/maintest.cpp.obj	9bd1dc3d65acb405
-633	792	7654449926515285	maintest.exe	304fe2bdadec1c20
-625	805	7654449926435218	main.exe	ad0d0e8a05533832

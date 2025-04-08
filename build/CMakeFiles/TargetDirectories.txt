@@ -1,4 +1,0 @@
-C:/dev/CPP/CarProjectRaylib/build/CMakeFiles/main.dir
-C:/dev/CPP/CarProjectRaylib/build/CMakeFiles/maintest.dir
-C:/dev/CPP/CarProjectRaylib/build/CMakeFiles/edit_cache.dir
-C:/dev/CPP/CarProjectRaylib/build/CMakeFiles/rebuild_cache.dir
