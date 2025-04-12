@@ -16,12 +16,17 @@ include_directories("${CMAKE_SOURCE_DIR}/include")
 find_package(raylib ${RAYLIB_VERSION} QUIET) # QUIET or REQUIRED
 
 add_executable(main src/main.cpp)
-add_executable(maintest src/maintest.cpp)
 
 add_library(raylib STATIC IMPORTED)
-set_target_properties(raylib PROPERTIES IMPORTED_LOCATION "${CMAKE_SOURCE_DIR}/include/lib/raylib.lib")
 add_library(imgui STATIC IMPORTED)
-set_target_properties(imgui PROPERTIES IMPORTED_LOCATION "${CMAKE_SOURCE_DIR}/include/lib/imguiLib.lib")
-target_link_libraries(main PRIVATE raylib imgui winmm)
-target_link_libraries(maintest PRIVATE raylib imgui winmm)
+if (WIN32)
+	set_target_properties(raylib PROPERTIES IMPORTED_LOCATION "${CMAKE_SOURCE_DIR}/include/lib/raylib.lib")
+	set_target_properties(imgui PROPERTIES IMPORTED_LOCATION "${CMAKE_SOURCE_DIR}/include/lib/imguiLib.lib")
+	target_link_libraries(main PRIVATE raylib imgui winmm)
+endif()
+if (UNIX)
+	set_target_properties(raylib PROPERTIES IMPORTED_LOCATION "${CMAKE_SOURCE_DIR}/include/lib/libraylib.a")
+	set_target_properties(imgui PROPERTIES IMPORTED_LOCATION "${CMAKE_SOURCE_DIR}/include/lib/libimguiLib.a")
+	target_link_libraries(main PRIVATE raylib imgui)
+endif()
 
