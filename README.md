@@ -5,6 +5,8 @@ ninja folder must be set as an environment variable, or placed in build folder
 
 Reference working build compiler configs with cmake. CMAKE + NINJA + LLVM CLANG WITH GNU-LIKE MSVC LINKER. (Get LLVM, Install, Get Visual Studio, Install, should work right out the box)
 
+Edit: I must be wrong about needing Visual Studio in order to link, didnt get Visual Studio on linux at all. (could be due to building on the superior OS)
+
 
 cmake -B build -G Ninja
 
