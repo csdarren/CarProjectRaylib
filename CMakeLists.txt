@@ -1,4 +1,5 @@
 cmake_minimum_required(VERSION 3.11) 
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 project(main C CXX)
 
 set(CMAKE_C_STANDARD 11)
@@ -13,7 +14,6 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 set(RAYLIB_VERSION 5.5)
 set(raylib_DIR "${CMAKE_SOURCE_DIR}/include/lib") # Set path for raylib supplied cmake files. (Copied from raylib cmake repo folder)
 include_directories("${CMAKE_SOURCE_DIR}/include")
-find_package(raylib ${RAYLIB_VERSION} QUIET) # QUIET or REQUIRED
 
 add_executable(main src/main.cpp)
 
