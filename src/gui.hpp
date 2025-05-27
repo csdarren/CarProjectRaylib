@@ -14,7 +14,7 @@ class Gui {
     inline static ImVec2 ScreenSize;
     inline static bool showBurgerMenu{false};
     inline static bool showBottomBar{true}; // defaults to true, if you need to toggle the bottom bar, this is how you do it. set to false
-    inline static bool showStatusBar{true}; // defaults to true, if you need to toggle the bottom bar, this is how you do it. set to false
+    inline static bool showStatusBar{true}; // defaults to true, if you need to toggle the status bar, this is how you do it. set to false
 
   public:
     Gui() {
@@ -25,8 +25,8 @@ class Gui {
         style.Colors[ImGuiCol_Button] = ImVec4(1, 0, 0, 0);        // Button inactive (Unfocused / not hovering)
         style.Colors[ImGuiCol_ButtonHovered] = ImVec4(1, 0, 0, 0); // Button hovered (Focused)
         style.Colors[ImGuiCol_ButtonActive] = ImVec4(1, 0, 0, 0);  // Button active (Focused, clicked)
-        std::cout << "ScreenSize X: " << ScreenSize.x << "\n";
-        std::cout << "ScreenSize Y: " << ScreenSize.y << "\n";
+        // std::cout << "ScreenSize X: " << ScreenSize.x << "\n";
+        // std::cout << "ScreenSize Y: " << ScreenSize.y << "\n";
     }
     static auto getScreenSize() -> ImVec2 & {
         return ScreenSize;
@@ -55,13 +55,12 @@ class Gui {
 
 class StatusBar : Gui {
   private:
+    ImVec2 *pScreenSize;
     static constexpr int HEIGHT_DIVISOR = 30;
     static constexpr int RIGHT_BAR_OFFSET = 10;
-    ImVec2 *pScreenSize;
     ImVec2 barSize;
     ImVec2 barPos;
     ImGuiWindowFlags barFlags = ImGuiWindowFlags_NoTitleBar | ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoMove | ImGuiWindowFlags_NoBringToFrontOnFocus;
-    const char *time{"Test time"};
 
   public:
     StatusBar()
@@ -74,10 +73,12 @@ class StatusBar : Gui {
             ImGui::SetNextWindowPos(barPos, 1);
             ImGui::SetNextWindowSize(barSize, 1);
             ImGui::Begin("Status Bar", nullptr, barFlags);
-            ImVec2 textSize = ImGui::CalcTextSize(time);
+            time_t cte = time(nullptr);
+            std::string currentTime = ctime(&cte);
+            ImVec2 textSize = ImGui::CalcTextSize(currentTime.c_str());
 
             ImGui::SetCursorPosX(barSize.x - textSize.x - RIGHT_BAR_OFFSET);
-            ImGui::Text(time);
+            ImGui::Text("%s", currentTime.c_str());
 
             ImGui::End();
         }
@@ -111,7 +112,8 @@ class BurgerMenu : Gui {
             ImGui::Begin("Burger Menu", nullptr, menuFlags);
 
             ImGui::SetCursorPosX(menuSize.x - CLOSE_BUTTON_SIZE.x - CLOSE_BUTTON_OFFSET.x);
-            if (ImGui::Button("Close Button")) {
+            if (ImGui::Button("Close", CLOSE_BUTTON_SIZE)) {
+                setBurgerState(!getBurgerState());
             }
 
             ImGui::End();
