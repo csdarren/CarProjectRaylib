@@ -1,3 +1,7 @@
+// TODO: Abstract shader loading and handling into its own class (BE CAREFUL, CAUSED SEGFAULT ERROR LAST TIME)
+// Abstract lights into its own class, Also be careful, could cause SEGFAULT
+// Abstract Draw commands into its own class, consider editing the way models are loaded into an array of models
+// Add HUD to the top of the screen with the time, other basic info
 #include <array>
 #include "raylib.h"
 #include "raymath.h"
@@ -25,7 +29,7 @@ void DrawModel(Model model, Vector3 modelPosition) {
     }
 }
 
-}   // namespace
+} // namespace
 
 auto main() -> int {
     static const int FPS = 60;
@@ -43,7 +47,7 @@ auto main() -> int {
     BottomBar bottomBar;
     while (!WindowShouldClose()) {
         if (IsKeyPressed(KEY_Y)) {
-            lights[0].enabled = !lights[0].enabled;   // Makes lights equal the opposite state (on off switch)
+            lights[0].enabled = !lights[0].enabled; // Makes lights equal the opposite state (on off switch)
         }
         for (Light &light : lights) {
             UpdateLightValues(shader, light);
