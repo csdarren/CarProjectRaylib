@@ -1,4 +1,4 @@
-Car Infotainment System 
+Car Infotainment System
 
 Built with CMake and Ninja.
 ninja folder must be set as an environment variable, or placed in build folder
@@ -6,7 +6,6 @@ ninja folder must be set as an environment variable, or placed in build folder
 Reference working build compiler configs with cmake. CMAKE + NINJA + LLVM CLANG WITH GNU-LIKE MSVC LINKER. (Get LLVM, Install, Get Visual Studio, Install, should work right out the box)
 
 Edit: I must be wrong about needing Visual Studio in order to link, didnt get Visual Studio on linux at all. (could be due to building on the superior OS)
-
 
 cmake -B build -G Ninja
 
@@ -17,5 +16,10 @@ Windows may have been broken when implementing linux changes in cmake file to ch
 X11 Errors may occur on linux. To solve this issue, you need the X11 Dev packages. On Debian Distros, use sudo apt install on the following libs:
 libx11-dev libxrandr-dev libxinerama-dev libxcursor-dev libxi-dev
 
-Must install OpenGL linux lib in order to build raylib library file (.a) 
+Must install OpenGL linux lib in order to build raylib library file (.a)
 libgl-dev
+
+Dependencies:
+cmake
+build.ninja
+OpenGL
