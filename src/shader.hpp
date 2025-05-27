@@ -4,9 +4,17 @@
 
 #include "raylib.h"
 
-auto inline CreateShader() -> Shader {
-    Shader shader = LoadShader("../assets/shaders/testshader.vs", "../assets/shaders/testshader.fs");
-    return shader;
-}
+class CustomShader {
+  private:
+    Shader shader{};
+
+  public:
+    CustomShader() {
+        this->shader = LoadShader("../assets/shaders/testshader.vs", "../assets/shaders/testshader.fs");
+    }
+    auto getShader() -> Shader {
+        return shader;
+    }
+};
 
 #endif

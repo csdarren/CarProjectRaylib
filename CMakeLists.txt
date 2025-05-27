@@ -22,7 +22,7 @@ add_library(imgui STATIC IMPORTED)
 
 if (WIN32)
 	set_target_properties(raylib PROPERTIES IMPORTED_LOCATION "${CMAKE_SOURCE_DIR}/include/libs/raylib.lib")
-	set_target_properties(imgui PROPERTIES IMPORTED_LOCATION "${CMAKE_SOURCE_DIR}/include/libs/imguiLib.lib")
+	set_target_properties(imgui PROPERTIES IMPORTED_LOCATION "${CMAKE_SOURCE_DIR}/include/libs/imgui.lib")
 	target_link_libraries(main PRIVATE raylib imgui winmm)
 endif()
 
