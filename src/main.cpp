@@ -1,16 +1,13 @@
-// TODO: Abstract shader loading and handling into its own class (BE CAREFUL, CAUSED SEGFAULT ERROR LAST TIME)
-// Abstract lights into its own class, Also be careful, could cause SEGFAULT
-// Abstract Draw commands into its own class, consider editing the way models are loaded into an array of models
-// Add HUD to the top of the screen with the time, other basic info
-#include "draw.hpp"
 #include "raylib.h"
-#include "raymath.h"
 #include "rlImGui.h"
 
+#include "draw.hpp"
 #include "lights.hpp"
 #include "shader.hpp"
 #include "camera.hpp"
-#include "gui.hpp"
+#include "menus/BottomBar.hpp"
+#include "menus/BurgerMenu.hpp"
+#include "menus/StatusBar.hpp"
 
 #define GLSL_VERSION 330
 
@@ -24,6 +21,11 @@ void rayInit() {
     rlImGuiSetup(true);
 }
 
+auto StartDrawing() -> void {
+    BeginDrawing();
+    ClearBackground(RAYWHITE);
+}
+
 } // namespace
 
 auto main() -> int {
@@ -32,8 +34,9 @@ auto main() -> int {
     CustomShader shader;
     CustomLights lightSource(shader.getShader());
     CustomCamera cam;
+
     Draw draw;
-    ImVec2 ScreenSize;
+
     Gui gui;
     BurgerMenu burgerMenu;
     BottomBar bottomBar;
@@ -42,16 +45,18 @@ auto main() -> int {
     while (!WindowShouldClose()) {
         lightSource.UpdateLights();
 
-        BeginDrawing();
-        ClearBackground(RAYWHITE);
+        StartDrawing();
         BeginMode3D(cam.GetCustomCamera());
         BeginShaderMode(shader.getShader());
 
         cam.CustomCameraUpdate();
 
         // Draw Calls
-        const Vector2 PlaneDimensions{1000.0, 1000.0};
-        DrawPlane(Vector3Zero(), PlaneDimensions, GRAY);
+
+        if (IsKeyPressed(KEY_U)) {
+            draw.toggleCarState();
+        }
+        Draw::Floor();
         draw.Car();
 
         // End Draw Calls
@@ -66,7 +71,6 @@ auto main() -> int {
         EndDrawing();
     }
     rlImGuiShutdown();
-    UnloadShader(shader.getShader());
     CloseWindow();
     return 1;
 }

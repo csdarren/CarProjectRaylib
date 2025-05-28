@@ -11,7 +11,6 @@
 class CustomLights {
   private:
     Shader shader{};
-    Vector3 lightPosition{};
     std::array<Light, MAX_LIGHTS> lights{};
     static constexpr Vector3 LIGHT_POS = {0, 4, 5};
 

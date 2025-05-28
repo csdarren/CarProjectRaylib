@@ -1,12 +1,12 @@
 #pragma once
 #ifndef GUI_HPP
 #define GUI_HPP
-#include <iostream>
-#include <ctime>
 
 #include "imgui.h"
 #include "raylib.h"
-#include "rlImGui.h"
+
+// INFO: Check individual files for each imgui menu that is rendered. These can be found in ./menus/
+// INFO: This class is only made to help manage all windows visibility from one location, and also set standards for all windows
 
 class Gui {
   private:
@@ -25,12 +25,12 @@ class Gui {
         style.Colors[ImGuiCol_Button] = ImVec4(1, 0, 0, 0);        // Button inactive (Unfocused / not hovering)
         style.Colors[ImGuiCol_ButtonHovered] = ImVec4(1, 0, 0, 0); // Button hovered (Focused)
         style.Colors[ImGuiCol_ButtonActive] = ImVec4(1, 0, 0, 0);  // Button active (Focused, clicked)
-        // std::cout << "ScreenSize X: " << ScreenSize.x << "\n";
-        // std::cout << "ScreenSize Y: " << ScreenSize.y << "\n";
     }
     static auto getScreenSize() -> ImVec2 & {
         return ScreenSize;
     }
+
+    // METHODS for BurgerMenu
     [[nodiscard]] static auto getBurgerState() -> bool {
         return Gui::showBurgerMenu;
     }
@@ -38,6 +38,7 @@ class Gui {
         Gui::showBurgerMenu = state;
     }
 
+    // METHODS for BottomBar
     [[nodiscard]] static auto getBottomBarState() -> bool {
         return Gui::showBottomBar;
     }
@@ -45,6 +46,7 @@ class Gui {
         Gui::showBottomBar = state;
     }
 
+    // METHODS FOR StatusBar
     [[nodiscard]] static auto getStatusBarState() -> bool {
         return Gui::showStatusBar;
     }
@@ -52,123 +54,4 @@ class Gui {
         Gui::showStatusBar = state;
     }
 };
-
-class StatusBar : Gui {
-  private:
-    ImVec2 *pScreenSize;
-    static constexpr int HEIGHT_DIVISOR = 30;
-    static constexpr int RIGHT_BAR_OFFSET = 10;
-    ImVec2 barSize;
-    ImVec2 barPos;
-    ImGuiWindowFlags barFlags = ImGuiWindowFlags_NoTitleBar | ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoMove | ImGuiWindowFlags_NoBringToFrontOnFocus;
-
-  public:
-    StatusBar()
-        : pScreenSize(&getScreenSize()) {
-        this->barSize = {pScreenSize->x, pScreenSize->y / HEIGHT_DIVISOR};
-        this->barPos = {0, 0};
-    }
-    auto Render() {
-        if (getStatusBarState()) {
-            ImGui::SetNextWindowPos(barPos, 1);
-            ImGui::SetNextWindowSize(barSize, 1);
-            ImGui::Begin("Status Bar", nullptr, barFlags);
-            time_t cte = time(nullptr);
-            std::string currentTime = ctime(&cte);
-            ImVec2 textSize = ImGui::CalcTextSize(currentTime.c_str());
-
-            ImGui::SetCursorPosX(barSize.x - textSize.x - RIGHT_BAR_OFFSET);
-            ImGui::Text("%s", currentTime.c_str());
-
-            ImGui::End();
-        }
-    }
-};
-
-class BurgerMenu : Gui {
-  private:
-    ImVec2 *pScreenSize;
-    static constexpr int WIDTH_DIVISOR = 5;
-    static constexpr ImVec2 CLOSE_BUTTON_OFFSET{10, 10};
-    static constexpr ImVec2 CLOSE_BUTTON_SIZE{50, 50};
-    static constexpr ImGuiWindowFlags menuFlags = ImGuiWindowFlags_NoTitleBar | ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoMove;
-    ImVec2 menuSize;
-    ImVec2 menuPos;
-
-    ImVec2 closeBtnPos;
-
-  public:
-    BurgerMenu()
-        : pScreenSize(&getScreenSize()) {
-        this->menuSize = {pScreenSize->x / WIDTH_DIVISOR, pScreenSize->y};
-        this->menuPos = {0, 0};
-
-        this->closeBtnPos = {pScreenSize->x - CLOSE_BUTTON_OFFSET.x, pScreenSize->y - CLOSE_BUTTON_OFFSET.y};
-    }
-    void Render() {
-        if (getBurgerState()) {
-            ImGui::SetNextWindowPos(menuPos, 1);
-            ImGui::SetNextWindowSize(menuSize, 1);
-            ImGui::Begin("Burger Menu", nullptr, menuFlags);
-
-            ImGui::SetCursorPosX(menuSize.x - CLOSE_BUTTON_SIZE.x - CLOSE_BUTTON_OFFSET.x);
-            if (ImGui::Button("Close", CLOSE_BUTTON_SIZE)) {
-                setBurgerState(!getBurgerState());
-            }
-
-            ImGui::End();
-        }
-    }
-};
-
-class BottomBar : private Gui {
-  private:
-    ImGuiWindowFlags barFlags = ImGuiWindowFlags_NoTitleBar | ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoMove | ImGuiWindowFlags_NoBringToFrontOnFocus;
-    ImVec2 *pScreenSize;
-
-    static constexpr ImVec2 BURGER_BUTTON_SIZE = {40.0F, 40.0F};
-    static constexpr float BURGER_WIDTH_DIVISOR = 0.20;
-    static constexpr int HEIGHT_DIVISOR = 5;
-    static constexpr int MAX_UI_TEXTURES = 10;
-
-    Texture burgerTex{};
-
-    ImVec2 barSize;
-    ImVec2 barPos;
-    ImVec2 burgerBtnPos;
-
-  public:
-    BottomBar()
-        : pScreenSize(&getScreenSize()) {
-        this->barSize = {pScreenSize->x, pScreenSize->y / HEIGHT_DIVISOR};
-        this->barPos = {0, pScreenSize->y - barSize.y};
-        this->burgerBtnPos = {(barSize.x * BURGER_WIDTH_DIVISOR) - (BURGER_BUTTON_SIZE.x / 2), (barSize.y / 2) - (BURGER_BUTTON_SIZE.y / 2)};
-        this->burgerTex = LoadTexture("../assets/images/Hamburger.png");
-    }
-    auto getPos() -> ImVec2 {
-        return this->barPos;
-    }
-    auto getSize() -> ImVec2 {
-        return this->barSize;
-    }
-    auto getBurgerBtnPos() -> ImVec2 {
-        return this->burgerBtnPos;
-    }
-    void Render() {
-        if (getBottomBarState()) {
-            ImGui::SetNextWindowPos(barPos, 1);
-            ImGui::SetNextWindowSize(barSize, 1);
-            ImGui::Begin("Main Screen", nullptr, barFlags);
-
-            if (rlImGuiImageButton("Hamburger", &burgerTex)) {
-                // put what happens when button pressed here:
-                std::cout << "Inverting BurgerState" << "\n";
-                setBurgerState(!getBurgerState()); // toggles burger state to the opposite of what it is
-                std::cout << "Current BurgerState = " << getBurgerState() << "\n";
-            }
-            ImGui::End();
-        }
-    }
-};
-
 #endif
