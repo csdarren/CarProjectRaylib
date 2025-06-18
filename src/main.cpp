@@ -1,3 +1,5 @@
+#include "imgui.h"
+#include "menus/Gauges.hpp"
 #include "raylib.h"
 #include "rlImGui.h"
 
@@ -8,6 +10,7 @@
 #include "menus/BottomBar.hpp"
 #include "menus/BurgerMenu.hpp"
 #include "menus/StatusBar.hpp"
+#include "menus/Debug.hpp"
 
 #define GLSL_VERSION 330
 
@@ -38,9 +41,11 @@ auto main() -> int {
     Draw draw;
 
     Gui gui;
+    Debug debug;
     BurgerMenu burgerMenu;
     BottomBar bottomBar;
     StatusBar statusBar;
+    Gauges gauges;
 
     while (!WindowShouldClose()) {
         lightSource.UpdateLights();
@@ -56,17 +61,29 @@ auto main() -> int {
         if (IsKeyPressed(KEY_U)) {
             draw.toggleCarState();
         }
-        Draw::Floor();
+        if (IsKeyPressed(KEY_I)) {
+            draw.toggleFloorState();
+        }
+        if (IsKeyPressed(KEY_O)) {
+            draw.toggleSpeedoState();
+        }
         draw.Car();
+        draw.Floor();
 
         // End Draw Calls
         EndShaderMode();
         EndMode3D();
 
         rlImGuiBegin();
+        gauges.Render();
+        ImVec2 speedoPos = gauges.getSpeedoPos();
+        ImVec2 speedoSize = gauges.getSpeedoSize();
+        draw.Speedometer(speedoPos, speedoSize, debug.getSpeed()); // Must draw 2D objects such as a Rectangle outside of 3D Mode
+
         bottomBar.Render();
         statusBar.Render();
         burgerMenu.Render();
+        debug.Render();
         rlImGuiEnd();
         EndDrawing();
     }

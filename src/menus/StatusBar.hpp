@@ -8,12 +8,12 @@
 
 class StatusBar : Gui {
   private:
-    ImVec2 *pScreenSize;
+    ImGuiWindowFlags flags = ImGuiWindowFlags_NoTitleBar | ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoMove | ImGuiWindowFlags_NoBringToFrontOnFocus;
     static constexpr int HEIGHT_DIVISOR = 30;
     static constexpr int RIGHT_BAR_OFFSET = 10;
+    ImVec2 *pScreenSize;
     ImVec2 size;
     ImVec2 pos;
-    ImGuiWindowFlags flags = ImGuiWindowFlags_NoTitleBar | ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoMove | ImGuiWindowFlags_NoBringToFrontOnFocus;
 
   public:
     StatusBar()
